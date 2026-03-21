@@ -61,7 +61,7 @@ transform:scale(1.15);
 }
 
 /* ======================
-COPYRIGHT
+COPYRIGHT (igual al tuyo, pero más seguro)
 ====================== */
 
 .footer-copy{
@@ -73,24 +73,37 @@ bottom:12px;
 }
 
 /* ======================
+TABLET (ajuste suave, sin romper diseño)
+====================== */
+
+@media (max-width:900px){
+
+.footer-columns{
+gap:40px;
+}
+
+.footer-col{
+min-width:180px;
+}
+
+}
+
+/* ======================
 CELULAR
 ====================== */
 
 @media (max-width:700px){
 
 .footer-columns{
-
 flex-direction:column;
 gap:20px;
-
 }
 
+/* 🔥 AQUÍ ESTÁ LA CLAVE */
 .footer-copy{
-
-position:static;
+position:static;   /* deja de flotar */
 text-align:center;
 margin-top:20px;
-
 }
 
 }

@@ -1,52 +1,52 @@
-Base
-    
+/* ======================
+BASE
+====================== */
+
 .footer-container{
 display:flex;
 justify-content:space-around;
 max-width:1000px;
 margin:auto;
 }
-/* INTRO NOSOTROS */
+
+/* ======================
+INTRO NOSOTROS
+====================== */
 
 .nosotros-intro{
-
 max-width:900px;
 margin:50px auto;
 padding:40px;
 border:3px solid #094124;
 text-align:center;
-
 }
 
 .nosotros-intro h1{
-
 font-size:50px;
 color:#094124;
 margin-top:-10px;
-
 }
 
 .nosotros-intro p{
-
 line-height:1.8;
 font-size:18px;
 color:#000000;
-
 }
 
-
-/* BLOQUES MISION Y VISION */
+/* ======================
+BLOQUES
+====================== */
 
 .bloque{
-
 display:flex;
 align-items:center;
 justify-content:center;
 max-width:1200px;
 margin:50px auto;
 gap:60px;
-
 }
+
+/* imagen */
 
 .bloque-imagen img{
 margin-top:-20px;
@@ -55,8 +55,9 @@ height:350px;
 object-fit:cover;
 object-position:center;
 margin-bottom:30px;
-
 }
+
+/* texto */
 
 .bloque-texto{
 max-width:500px;
@@ -69,7 +70,6 @@ font-size:48px;
 color:#094124;
 margin-bottom:30px;
 text-align:center;
-
 }
 
 .bloque-texto p{
@@ -79,4 +79,76 @@ color:#000000;
 text-align:justify;
 }
 
+/* ======================
+TABLET
+====================== */
 
+@media (max-width: 900px){
+
+.bloque{
+gap:30px;
+}
+
+.bloque-imagen img{
+width:420px;
+height:280px;
+}
+
+.bloque-texto h2{
+font-size:38px;
+}
+
+}
+
+/* ======================
+CELULAR
+====================== */
+
+@media (max-width: 700px){
+
+/* intro */
+.nosotros-intro{
+margin:30px 15px;
+padding:25px;
+}
+
+.nosotros-intro h1{
+font-size:34px;
+margin-top:0; /* 🔥 quitamos el negativo */
+}
+
+.nosotros-intro p{
+font-size:16px;
+}
+
+/* bloques pasan a vertical */
+.bloque{
+flex-direction:column;
+gap:20px;
+margin:40px 15px;
+}
+
+/* imagen full responsive */
+.bloque-imagen img{
+width:100%;
+height:auto;
+margin-top:0; /* 🔥 quitamos negativos */
+margin-bottom:10px;
+}
+
+/* texto */
+.bloque-texto{
+max-width:100%;
+}
+
+.bloque-texto h2{
+font-size:30px;
+margin-top:0;
+margin-bottom:15px;
+}
+
+.bloque-texto p{
+font-size:16px;
+}
+
+}
