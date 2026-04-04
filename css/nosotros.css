@@ -152,3 +152,30 @@ font-size:16px;
 }
 
 }
+
+@media (max-width: 700px){
+
+.bloque{
+flex-direction: column;
+}
+
+/* 🔥 CLAVE: invertir orden SOLO cuando la imagen va primero */
+.bloque:not(.inverso) .bloque-imagen{
+order:2;
+}
+
+.bloque:not(.inverso) .bloque-texto{
+order:1;
+}
+
+/* 🔥 para el bloque inverso (visión) ya está correcto,
+pero lo dejamos explícito por claridad */
+.bloque.inverso .bloque-texto{
+order:1;
+}
+
+.bloque.inverso .bloque-imagen{
+order:2;
+}
+
+}
